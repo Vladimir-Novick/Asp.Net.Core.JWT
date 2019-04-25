@@ -1,7 +1,7 @@
 # Asp.Net.Core.JWT
 JSON Web Token : An Example in  ASP.NET.CORE MVC
 
-A JSON Web Token is used to send information that can be verified and trusted by means of a digital signature. It comprises a compact and URL-safe JSON object, which is cryptographically signed to verify its authenticity, and which can also be encrypted if the payload contains sensitive information.
+A JSON Web Token (JWT) is used to send information that can be verified and trusted by means of a digital signature. It comprises a compact and URL-safe JSON object, which is cryptographically signed to verify its authenticity, and which can also be encrypted if the payload contains sensitive information.
 
 ### Verifying a JSON Web Token (c#)
 
