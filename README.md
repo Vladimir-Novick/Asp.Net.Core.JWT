@@ -1,5 +1,15 @@
 # Asp.Net.Core.JWT
-JSON Web Token : An Example in  ASP.NET.CORE MVC 
+JSON Web Token : An Example in  ASP.NET.CORE MVC
+
+### Verifying a JSON Web Token (c#)
+
+Decode the ID token ( Nuget package: System.IdentityModel.Tokens.Jwt )
+
+      var jwtToken = new JwtSecurityToken(token);
+      var str_dateOfBird = jwtToken.Claims.Where(c => c.Type == ClaimTypes.DateOfBirth)
+                 .Select(c => c.Value).SingleOrDefault();
+		 
+		 
 
 Copyright (C) 2019 by Vladimir Novick http://www.linkedin.com/in/vladimirnovick , 
 
