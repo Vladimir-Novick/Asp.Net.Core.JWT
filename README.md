@@ -29,6 +29,23 @@ Using NUGET package: System.IdentityModel.Tokens.Jwt
             items.Add(item);
          }
  
+ ### Put custom information to Pailoads ( C# )
+ 
+           var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("secretKey"));
+            var signInCred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var jwtToken = new JwtSecurityToken(
+                  users:{ "id": UserID},
+                  issuer: "mysite.com",
+                  audience: "yoursite.com",
+                  expires: DateTime.Now.AddMinutes(30),
+                  claims: claimsdata,                      
+                signingCredentials: signInCred
+                );
+               //custom claims as per  requirements
+                 jwtToken.Payload["userInfo"] = "My user info";
+               //End of custom claims
+              var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+	 
 		 
 
 Copyright (C) 2019 by Vladimir Novick http://www.linkedin.com/in/vladimirnovick , 
