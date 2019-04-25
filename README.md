@@ -15,6 +15,20 @@ NUGET package: System.IdentityModel.Tokens.Jwt
           var str_dateOfBird = jwtToken.Claims.Where(c => c.Type == ClaimTypes.DateOfBirth)
                  .Select(c => c.Value).SingleOrDefault();
 		 
+### Get all custom information ( Pailoads )
+
+         var jwtToken = new JwtSecurityToken(token);
+         List<PayloadItem> items = new List<PayloadItem>();
+         foreach (var paiload in jwtToken.Payload)
+         {
+            PayloadItem item = new PayloadItem()
+            {
+               Key = paiload.Key,
+               Value = paiload.Value.ToString()
+            };
+            items.Add(item);
+         }
+ 
 		 
 
 Copyright (C) 2019 by Vladimir Novick http://www.linkedin.com/in/vladimirnovick , 
