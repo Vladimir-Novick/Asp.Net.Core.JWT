@@ -5,7 +5,7 @@ A JSON Web Token (JWT) is used to send information that can be verified and trus
 
 ### Verifying a JSON Web Token (c#)
 
-NUGET package: System.IdentityModel.Tokens.Jwt
+Using NUGET package: System.IdentityModel.Tokens.Jwt
 
       var jwtToken = new JwtSecurityToken(token);
        DateTime validDateTime = jwtToken.ValidTo;	
