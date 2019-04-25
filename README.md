@@ -3,6 +3,8 @@ JSON Web Token : An Example in  ASP.NET.CORE MVC
 
 ### Verifying a JSON Web Token (c#)
 
+NUGET package: System.IdentityModel.Tokens.Jwt
+
       var jwtToken = new JwtSecurityToken(token);
        DateTime validDateTime = jwtToken.ValidTo;	
        
