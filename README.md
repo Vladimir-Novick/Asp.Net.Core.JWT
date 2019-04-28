@@ -53,10 +53,10 @@ Using NUGET package: System.IdentityModel.Tokens.Jwt
 ### Get all Claim information (c#)
 
          var jwtToken = new JwtSecurityToken(token);
-         List<PayloadItem> items = new List<PayloadItem>();
+         List<ClaimItem> items = new List<ClaimItem>();
          foreach (var claim in jwtToken.Claims)
             {
-                PayloadItem item = new PayloadItem()
+                ClaimItem item = new ClaimItem()
                 {
                     Key = claim.Type,
                     Value = claim.Value
