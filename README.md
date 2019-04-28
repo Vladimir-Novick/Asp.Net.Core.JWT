@@ -49,6 +49,20 @@ Using NUGET package: System.IdentityModel.Tokens.Jwt
                  jwtToken.Payload["userInfo"] = "My user info";
                //End of custom claims
               var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+	      
+### Get all Claim information (c#)
+
+         var jwtToken = new JwtSecurityToken(token);
+         List<PayloadItem> items = new List<PayloadItem>();
+         foreach (var claim in jwtToken.Claims)
+            {
+                PayloadItem item = new PayloadItem()
+                {
+                    Key = claim.Type,
+                    Value = claim.Value
+                };
+                items.Add(item);
+            }
 	 
 		 
 
