@@ -17,7 +17,7 @@ Using NUGET package: System.IdentityModel.Tokens.Jwt
 
 ### Get Paiload info by name (c#)
 	   var jwtToken = new JwtSecurityToken(token);
-	   var value =  jwtToken.Payload["userInfo"];
+	   var value =  jwtToken.Payload["userInfo"].ToString();
 
 ### Get all custom information ( Pailoads ) (c#)
 
